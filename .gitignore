@@ -6,3 +6,5 @@ generated
 .env.dev
 .env.prod
 logs/
+pnpm-workspace.yaml
+package-lock.json
