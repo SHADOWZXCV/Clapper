@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "Node16",
+        "esModuleInterop": true,
+        "target": "ES2022",
+        "moduleResolution": "Node16",
+        "sourceMap": true, // Helps with debugging
+        "outDir": "dist",
+        // other stuff
+        "strict": false,
+        "skipLibCheck": true,
+        "lib": ["esnext"], // Include the latest ECMAScript libraries
+        "allowSyntheticDefaultImports": true
+    },
+    "include": ["./**/*.ts"],
+    "exclude": ["node_modules", "dist"]
+}
