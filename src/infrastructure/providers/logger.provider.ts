@@ -1,7 +1,7 @@
 import pino from "pino";
 import pinoHttp from "pino-http";
 import LoggingPort from "../../application/ports/logger.port.js";
-import createDefaultConfig from "../config/logger/index.js";
+import createDefaultConfig from "../config/logger/pino.index.js";
 import { EnvironmentList } from "../../application/ports/environment.port.js";
 
 export type PinoLogger =  ReturnType<typeof pino.pino>;

@@ -5,7 +5,9 @@ config({ quiet: true });
 class EnvironmentProvider implements EnvironmentPort {
     private readonly envRequired = [
         "ENVIRONMENT",
+        "SERVER_HOST",
         "SERVER_HTTP_PORT",
+        "SERVER_SOCKET_PORT",
         "DB_USER",
         "DB_PASSWORD",
         "DB_HOST",
@@ -28,6 +30,11 @@ class EnvironmentProvider implements EnvironmentPort {
         if (missing.length) {
             throw new Error(`Missing environment variables: ${missing}`);
         }
+    }
+
+    assertExistenceOf(requiredVariable: string): void {
+        if (Object.keys(this.env).includes(requiredVariable))
+            throw new Error(`${requiredVariable} IS A REQUIRED FIELD`);
     }
 }
 

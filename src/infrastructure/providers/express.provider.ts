@@ -29,10 +29,11 @@ class ExpressServerProvider implements HttpServerPort {
     }
 
     listenToPort() {
+        const host = this.environment.SERVER_HOST;
         const port = this.environment.SERVER_HTTP_PORT;
 
         this.app.listen(port, () => {
-            this.logger.info(`Server is running on http://localhost:${port}`);
+            this.logger.info(`Express server is running on ${host}:${port}`);
         });
     }
 
